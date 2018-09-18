@@ -1,0 +1,80 @@
+/* pages/shared/shared.wxss */
+
+/* pages/collect/collect.wxss */
+
+page {
+  background-color: #f3f3f3;
+}
+
+.list_container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  font-family: "Arial";
+}
+
+.item_container {
+  display: flex;
+  flex-direction: row;
+  width: 96vw;
+  height: 160rpx;
+  margin: 16rpx auto 4rpx;
+  background-color: white;
+  border-radius: 2.6% 2.6% 1.6% 1.6%;
+}
+
+.right_container {
+  display: flex;
+  flex-direction: column;
+  height: 130rpx;
+  width: 510rpx;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.img {
+  height: 120rpx;
+  width: 180rpx;
+  margin: auto 10rpx;
+  border-radius: 2.6% 2.6% 2.6% 2.6%;
+}
+
+.title {
+  font-size: 29rpx;
+  font-family: "PingFang SC";
+  font-weight: bold;
+}
+
+.author_name {
+  font-size: 23rpx;
+  color: #616ca6;
+  line-height: 30rpx;
+}
+
+.lower_container {
+  height: 30rpx;
+  width: 500rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.love_image {
+  height: 23rpx;
+  width: 23rpx;
+  margin: auto 0rpx;
+  margin-left: 20rpx;
+}
+
+.view_image {
+  height: 25rpx;
+  width: 25rpx;
+  margin: auto 0rpx;
+  margin-left: 20rpx;
+}
+
+.num {
+  font-size: 23rpx;
+  line-height: 30rpx;
+  margin-left: 8rpx;
+  color: #bfbfbf;
+}

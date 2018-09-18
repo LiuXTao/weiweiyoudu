@@ -1,0 +1,50 @@
+<!--pages/upload/upload.wxml-->
+<view class="container">
+  <view class="text_container">
+
+    <text class="font1">给新用户的一封信</text>
+    <text> \n </text><!--换行-->
+    <text class="font2">各位读者大家好！</text>
+     <text class="font2">欢迎来到微微有读，这是一个神奇的小程序，只需要体验三分钟，即可... 额，不好意思走错片场了。
+     微微有读是一个收集用户分享的各类推送的平台，在这里大家可以分享推送、可以阅读到很多优质的内容性文章、也可以发现自己喜欢的公众号。
+     </text>   
+     
+    <!-- <text class="font2">首先，复制好推送链接进入微微有读小程序，确认预览的文章标题，点击提交即可分享。</text> -->
+    <!-- <image src='/images/Step1.jpg' style="width:90vw;margin:10rpx auto;" class="pict"></image> -->
+    <!-- <text>2.新用户每天只能分享3条推送，积分越高能分享的推送就越多</text> -->
+   <text class="font2">请尽情分享自己喜欢的或者自己写的公众号推送。我这里有酒，就等你的推送哦~
+   但是带有广告性质的推送在微微有读是不受欢迎的哦，若多次发现上传带有浓烈广告性质的推送，将会禁止该用户分享推送的资格哦~</text>  
+    <text class="font2">有bug和想要联系我们的请发邮件至 weiweiyoudu@163.com
+    我们会尽快回复哦~</text>
+    <text> \n </text><!--换行-->
+    <text class = "font1">使用Tips：</text>
+    <text class = 'font2'>
+    分享推送：复制推送链接，进入小程序就可以美美地分享推送啦
+    关注公众号：点击文章上的公众号头像和名称就可以复制公众号名称美美地关注喜欢的公众号啦
+    </text>
+   
+    <!-- <text class = "font2">关于分享推送</text>
+    <image src = "/images/upload.jpg" style = "width:60vw;" mode = "aspectFit"></image> 
+    <text class = "font2">关注公众号</text>
+    <image src = '/images/duplicate.jpg' style = "width:60vw;" mode = "aspectFit"></image> -->
+  </view>
+
+  <!-- <!-- <form bindsubmit='formSubmit'>
+    <view class="container">
+      <input name="input" placeholder="请输入推送链接" class='input' />
+
+      <button size='mini' form-type='submit' class='submit'>提交</button>
+    </view>
+  </form> -->
+
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+
+  <view class="modalDlg" wx:if="{{showModal}}">
+      <div class="title">
+        <text class="tips">如何分享文章</text>
+        <icon type="clear" class="close" bindtap='close'></icon>
+      </div>
+      <image class="picture" model="aspectFill" src="/images/upload.jpg"/>
+    
+  </view>
+</view>

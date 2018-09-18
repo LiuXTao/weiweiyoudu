@@ -1,0 +1,72 @@
+<!--pages/list/list.wxml-->
+<import src="list_element-template/list_element-template.wxml" />
+ <view class="scrolltxt" style="display:{{visibility}}">
+    <view class="marquee_box">
+      <view class="marquee_text" style="transform: translateX(-{{marqueeDistance}}px)">
+        <text>{{text}}</text>
+        <text style="margin-right:{{marquee_margin}}px;"></text>
+        <text style="margin-right:{{marquee_margin}}px;">{{text}}</text>        
+      </view>
+    </view>
+    <view style="height:70rpx,line-height:70rpx;width:40rpx;"  bindtap='close'>
+      <image class="img_close" src="../../images/close_cross.png" bindtap='close'></image>
+    </view>
+  </view>
+<scroll-view scroll-y="true" class="list_container" enable-back-to-top="true" bindscrolltolower="onScrollLower" bindscrolltoupper="onScrollUpper">
+ 
+  <block wx:for="{{datalist}}" wx:for-item="item" wx:for-index="idx">
+    <view class="list_element" catchtap='onTap' data-elementurl="{{item.url}}" data-elementid="{{item.id}}" data-elementidx="{{idx}}">
+      <image src="{{item.img}}" class="title_image" mode='aspectFill'></image>
+      <!-- 旧版样式 2018/5/28 -->
+      <!-- <view class="upper_container">
+        <view class="author_container" catchtap='onAuthorTap' data-elementauthor="{{item.author}}">
+          <image src="{{item.authorimg}}" class="author_image"></image>
+          <text class="author_name">{{item.author}}</text>
+        </view>
+        <view class="views_container">
+          <image src="/images/view.png" class="views_image"></image>
+          <text class="views_num">{{item.view}}</text>
+        </view>
+      </view> -->
+
+      <!-- <view class="article_informantion"> -->
+      <text class="title">{{item.title}}</text>
+      <!-- <view class="text_container"> -->
+
+
+
+      <view class="lower_container">
+
+        <view class='left_container'>
+          <view class="author_container" catchtap='onAuthorTap' data-elementauthor="{{item.author}}">
+            <image src="{{item.authorimg}}" class="author_image"></image>
+            <text class="author_name">{{item.author}}</text>
+          </view>
+          <view class="views_container">
+            <image src="/images/view.png" class="views_image"></image>
+            <text class="views_num">{{item.view}}</text>
+          </view>
+        </view>
+
+        <view class='right_container'>
+          <view class="love-container" catchtap='onLoveTap' data-elementid="{{item.id}}" data-elementidx="{{idx}}">
+            <image wx:if="{{articlesLoved[item.id - 1]}}" class="love_image" src='/images/love.png'></image>
+            <image wx:else class="love_image" src='/images/love_unselect.png'></image>
+            <text class="love_num">{{item.love}}</text>
+          </view>
+          <image wx:if="{{articlesCollected[item.id - 1]}}" class="collect_image" src='/images/collect.png' catchtap='onCollectTap' data-elementid="{{item.id}}" data-elementidx="{{idx}}"></image>
+          <image wx:else class="collect_image" src='/images/collect_unselect.png' catchtap='onCollectTap' data-elementid="{{item.id}}" data-elementidx="{{idx}}"></image>
+        </view>
+      </view>
+
+
+
+
+    </view>
+    <!-- </view> -->
+
+
+
+  </block>
+  <text wx:if="{{isNoMore}}" class="NoMore">期待更多分享的文章ヽ(°◇° )ノ</text>
+</scroll-view>

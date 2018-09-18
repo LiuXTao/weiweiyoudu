@@ -1,0 +1,21 @@
+<view class="list_container">
+  <block wx:for="{{collectlist}}" wx:for-item="item" wx:for-index="idx">
+    <view class="item_container" data-elementurl="{{item.url}}" data-elementid="{{item.id}}" catchtap='onTap'>
+      <image src="{{item.img}}" class="img" />
+      <view class="right_container">
+        <text class="title">{{item.title}}</text>
+        <!-- <image src="{{item[0].authorimg}}"></image> -->
+        
+        <view class = "lower_container">
+            <text class="author_name">{{item.author}}</text>
+            <image src='/images/love_grey.png' class='love_image'/>
+            <text class = 'num'>{{item.love}}</text>
+            <image src='/images/view.png' class = 'view_image'></image>
+            <text  class = 'num'>{{item.view}}</text>
+        </view>
+    
+      </view>
+
+    </view>
+  </block>
+</view>

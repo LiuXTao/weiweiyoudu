@@ -1,0 +1,31 @@
+/* pages/start/start.wxss */
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f3f3;
+  position: fixed;
+  /* align-items: center; *//* justify-content: space-between; *//* padding: 200rpx 0; *//* box-sizing: border-box; */
+}
+
+.start-bg{
+  width:100%;
+  height:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.enter-btn{
+  margin-top:400rpx;
+  width:300rpx;
+  height:80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.enter-label{
+  font-size: 20sp;
+  color:gray;
+}

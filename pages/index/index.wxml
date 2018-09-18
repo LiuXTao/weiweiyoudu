@@ -1,0 +1,66 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="top-container" >
+  
+      <!-- <image src='{{userInfo.avatarUrl}}' class="head_img" mode="aspectFill"></image> -->
+        <view class="userinfo"  style="background-image:url('https://i.loli.net/2018/06/13/5b207e7e17adb.jpg'); background-size: cover">
+          <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="user-btn"> 获取头像昵称 </button>
+          <block wx:else> 
+              <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+              <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+              <view class="label-bar">
+                  <view wx:for="{{labels}}" wx:for-item="item">
+                  <view class="label"style="background-image:url('https://i.loli.net/2018/06/13/5b2084ca4cc26.png'); background-size: cover">
+                     <text class="label-name">{{item}}</text> 
+                  </view>
+                </view>  
+              </view> 
+          </block>
+      </view>
+    </view>
+
+  <view class="line_container" bindtap='onShareTap'>
+    <view class="left_container">
+      <image class="icon" src='/images/about.jpg' ></image>
+      <text class="line_text">致新用户</text>
+    </view>
+
+    <image class="line_arrow" src='/images/arrow.png'></image>
+  </view>
+  <view class="line_container" bindtap='onMyCollectTap'>
+    <view class='left_container'>
+      <image class="icon" src='/images/upload.png'></image>
+      <text class="line_text">我的收藏</text>
+    </view>
+
+    <image class="line_arrow" src='/images/arrow.png'></image>
+  </view>
+  <view class="line_container" bindtap='onMyShareTap'>
+    <view class='left_container'>
+      <image class="icon" src='/images/share.jpg' ></image>
+      <text class="line_text">我的分享</text>
+    </view>
+    <image class="line_arrow" src='/images/arrow.png'></image>
+  </view>
+  <!-- <view class='tips_container'>
+    <text class="font1">使用Tips</text>
+    <text class='font2'>分享推送：复制推送链接，进入微微有读小程序就可以马上分享推送啦~
+    关注公众号：点击文章上的公众号头像和名称可以复制公众号名称然后去添加公众号一栏关注自己喜欢的公众号吧~
+    </text>
+  </view> -->
+  <!-- <view class="line_container">
+    <text class="line_text">意见反馈</text>
+    <image class="line_arrow" src='/images/arrow.png'></image>
+  </view>
+  <view class="line_container">
+    <text class="line_text">关于我们</text>
+    <image class="line_arrow" src='/images/arrow.png'></image>
+  </view> -->
+  <!-- <form bindsubmit='formSubmit'>
+    <view>
+      <input name="input" placeholder="推送链接" confirm-type = "分享" />
+
+      <button size='mini' form-type='submit'>提交</button>
+    </view>
+  </form> -->
+</view>

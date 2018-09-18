@@ -1,0 +1,16 @@
+<template name="list_element">
+  <view class="list_element" bindtap='onTap' data-elementurl="{{url}}" data-elementid="{{id}}">
+    <image src="{{img}}" class="title_image"></image>
+    <view class="article_informantion">
+      <text class="title">{{title}}</text>
+      <view class="text_container">
+        <image src="{{authorimg}}" class="author_image"></image>
+        <text class="author_name">{{author}}</text>
+        <!-- <text class="author_name" style = "float:right">阅读量</text>
+        <text class="author_name" style = "float:right">{{view}}</text> -->
+        <image wx:if="{{test}}" class="love_image" src='/images/love_unselect.png' bindtap='onLoveTap'></image>
+        <image wx:else class="love_image" src='/images/love.png' bindtap='onLoveTap'></image>
+      </view>
+    </view>
+  </view>
+</template>

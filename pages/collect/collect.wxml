@@ -1,0 +1,18 @@
+<scroll-view class="list_container">
+<text class = 'tips'>左滑可以取消收藏哦^O^ </text>
+  <scroll-view wx:for="{{collectlist}}" wx:for-item="item" wx:for-index="index" class="item-list">
+    <view bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" class="item-container"  data-index="{{index}}"  data-elementurl="{{item[0].url}}" data-elementid="{{item[0].id}}" catchtap='onTap' style="left:{{leftWidth[index]+'rpx'}}">
+       <image src="{{item[0].img}}" class="img" style='aspectFill' />
+        <view class="right_container">
+          <text class="title">{{item[0].title}}</text>
+          <!-- <image src="{{item[0].authorimg}}"></image> -->
+          <text class="author_name">{{item[0].author}}</text>
+        </view>
+       <!-- <image class="delete" catchtap='onDeleteTap' src="/images/delete.png" data-elementid="{{item[0].id}}"  data-elementidx="{{idx}}" ></image>  -->
+    </view>
+
+    <view class="item-oper">
+      <view data-elementidx="{{index}}" data-elementurl="{{item[0].url}}" data-elementid="{{item[0].id}}" bindtap= "dele" catchtap='onDeleteTap' class="oper-delete">删除</view> 
+     </view>
+  </scroll-view>
+</scroll-view> 

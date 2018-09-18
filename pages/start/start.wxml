@@ -1,0 +1,8 @@
+<!--pages/start/start.wxml-->
+<view class="container">
+  <view class="start-bg" style="background-image:url('https://i.loli.net/2018/06/13/5b207e7e17adb.jpg'); background-size: cover">
+    <view class="enter-btn" style="background-image:url('https://i.loli.net/2018/06/13/5b2084ca4cc26.png'); background-size: cover" bindtap='enter'>
+      <text class="enter-label">进入微微有读</text>
+    </view>
+  </view>
+</view>

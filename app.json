@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/start/start",
+    "pages/index/index",
+    "pages/list/list",
+    "pages/collect/collect",
+    
+    "pages/upload/upload",
+    "pages/shared/shared",
+    "pages/article/article",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTitleText": "微微有读",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#4D49BF",
+    "color": "#8a8a8a",
+    "list": [
+      {
+        "pagePath": "pages/list/list",
+        "iconPath": "/images/article_unselect.png",
+        "selectedIconPath": "/images/article.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "/images/me_unselect.png",
+        "selectedIconPath": "/images/me.png",
+        "text": "我的"
+      }
+    ]
+  }
+}
